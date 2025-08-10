@@ -1,0 +1,167 @@
+/* Basic styles for the real‑time chat application */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0069d9;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Chat layout */
+#chat {
+  display: flex;
+  height: 90vh;
+  width: 95vw;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#sidebar {
+  width: 25%;
+  min-width: 220px;
+  background: #f9f9f9;
+  border-right: 1px solid #e0e0e0;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+#roomsList li,
+#usersList li {
+  padding: 0.4rem;
+  margin-bottom: 0.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#roomsList li:hover,
+#usersList li:hover {
+  background: #e5e5e5;
+}
+
+.new‑room {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.new‑room input {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+#chatArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+#messages .message {
+  margin-bottom: 0.75rem;
+}
+
+#messages .message .user {
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+#messages .message.system {
+  font-style: italic;
+  color: #777;
+}
+
+#messageForm {
+  display: flex;
+  border-top: 1px solid #e0e0e0;
+  padding: 0.5rem 1rem;
+}
+
+#messageInput {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  box-sizing: border-box;
+}
+
+#messageForm button {
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#messageForm button:hover {
+  background: #218838;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real‑Time Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Login form -->
+      <div id="login" class="card">
+        <h2>Join a Chat Room</h2>
+        <label>
+          Your name<br />
+          <input type="text" id="username" placeholder="e.g. Alice" />
+        </label>
+        <label>
+          Room name<br />
+          <input type="text" id="room" placeholder="e.g. general" />
+        </label>
+        <button id="joinBtn">Join</button>
+      </div>
+      <!-- Chat UI -->
+      <div id="chat" class="hidden">
+        <div id="sidebar">
+          <h3>Rooms</h3>
+          <ul id="roomsList"></ul>
+          <div class="new‑room">
+            <input type="text" id="newRoomName" placeholder="New room" />
+            <button id="createRoomBtn">Create</button>
+          </div>
+          <h3>Users</h3>
+          <ul id="usersList"></ul>
+        </div>
+        <div id="chatArea">
+          <div id="messages"></div>
+          <form id="messageForm">
+            <input
+              type="text"
+              id="messageInput"
+              autocomplete="off"
+              placeholder="Type a message..."
+            />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
